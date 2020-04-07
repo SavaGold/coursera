@@ -1,10 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
 
-
-
-function RenderDish({dish}) {
-
+function RenderDish({ dish }) {
     return (
         <Card className="col-12 col-md-5 m-1">
             <CardImg width="100%" src={dish.image} alt={dish.name} />
@@ -16,7 +13,7 @@ function RenderDish({dish}) {
     );
 }
 
-function RenderComments({comments}) {
+function RenderComments({ comments }) {
     if (comments !== 0)
         return (
             <div className="col-12 col-md-5 m-1">
@@ -38,20 +35,13 @@ function RenderComments({comments}) {
         );
 }
 
-
-
 const DishDetail = (props) => {
-
-
-    console.log('DishDetail Component render is invoked!')
-
-
     if (props.dish != null)
         return (
             <div class="container">
                 <div className="row">
-                    <RenderDish dish = {props.dish}/>
-                    <RenderComments comments = {props.dish.comments} />
+                    <RenderDish dish={props.dish} />
+                    <RenderComments comments={props.dish.comments} />
                 </div>
             </div>
         );
@@ -60,7 +50,6 @@ const DishDetail = (props) => {
             <div></div>
         )
 }
-
 
 export default DishDetail;
 

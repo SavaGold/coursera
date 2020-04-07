@@ -15,9 +15,6 @@ function RenderMenuItem({ dish, onClick }) {
 
 
 const Menu = (props) => {
-
-
-
   const menu = props.dishes.map((dish) => {
     return (
       <div key={dish.id} className="col-12 col-md-5 m-1">
@@ -25,9 +22,7 @@ const Menu = (props) => {
       </div>
     );
   });
-
   console.log('Menu Component render is invoked!')
-
   return (
     <div className="container">
       <div className="row">
